@@ -1,6 +1,14 @@
-//your JS code here. If required.
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form');
 
-function alerrt(event) {
-	event.preventDefault().
-    alert(`First Name: ${document.querySelector('#first').value} Last Name: ${document.querySelector('#last').value} Phone Number: ${document.querySelector('#number').value} Email ID: ${document.querySelector('#email').value}`);
-}
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        const firstName = document.querySelector('#first').value;
+        const lastName = document.querySelector('#last').value;
+        const phoneNumber = document.querySelector('#number').value;
+        const email = document.querySelector('#email').value;
+
+        alert(`First Name: ${firstName} Last Name: ${lastName} Phone Number: ${phoneNumber} Email ID: ${email}`);
+    });
+});
